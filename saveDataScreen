@@ -1,0 +1,25 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class SaveDataScreen extends StatefulWidget {
+  SaveDataScreen({Key? key, this.dialogData}) : super(key: key);
+
+  String? dialogData;
+
+  @override
+  State<SaveDataScreen> createState() => _SaveDataScreenState();
+}
+
+class _SaveDataScreenState extends State<SaveDataScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Dialog Box Data'),
+      ),
+      body: Center(
+        child: Text(widget.dialogData!, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 200),),
+      ),
+    );
+  }
+}
